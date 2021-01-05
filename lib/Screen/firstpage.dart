@@ -81,209 +81,190 @@ class _FirstPageState extends State<FirstPage> {
                           children: <Widget>[
                             GestureDetector(
                               onTap: _launchURL1,
-                              child: Container(
-                                height:
-                                    MediaQuery.of(context).size.height * .57,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage("images/background.png"),
-                                    fit: BoxFit.fill,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: <Widget>[
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        top:
+                                            MediaQuery.of(context).size.height *
+                                                .1),
+                                    height: MediaQuery.of(context).size.height *
+                                        .26,
+                                    decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                        image: AssetImage("images/cec1.jpg"),
+                                      ),
+                                    ),
                                   ),
-                                ),
+                                ],
                               ),
                             ),
                             SizedBox(
-                              height: MediaQuery.of(context).size.height * .05,
+                              height: MediaQuery.of(context).size.height * .013,
                             ),
                             SizedBox(
                               height: MediaQuery.of(context).size.height * .02,
                             ),
                             Container(
                               margin: EdgeInsets.all(
-                                  MediaQuery.of(context).size.height * .007),
+                                  MediaQuery.of(context).size.height * .024),
                               child: Align(
                                 alignment: Alignment.bottomCenter,
-                                child: Row(
+                                child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    FlatButton(
-                                        highlightColor: Colors.blue[300],
-                                        shape: RoundedRectangleBorder(
+                                    Container(
+                                      width: MediaQuery.of(context).size.width *
+                                          .48,
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              .076,
+                                      margin: EdgeInsets.all(
+                                          MediaQuery.of(context).size.height *
+                                              .024),
+                                      child: RaisedButton(
+                                          elevation: 1.2,
+                                          color: Colors.white,
+                                          highlightColor: Colors.blue[300],
+                                          shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(10),
-                                            side: BorderSide(
-                                                color: Colors.black,
-                                                width: 1.0)),
-                                        splashColor: Colors.black,
-                                        onPressed: () {
-                                          _saveDeviceToken();
-
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) => Notify()),
-                                          );
-                                        },
-                                        child: Text(
-                                          "   Notice   ",
-                                          style: TextStyle(
-                                            fontFamily: 'Ubuntu',
-                                            fontWeight: FontWeight.w400,
-                                            fontSize:
-                                                SizeConfig.safeBlockHorizontal *
-                                                    6,
                                           ),
-                                        )),
-                                    FlatButton(
-                                        highlightColor: Colors.blue[300],
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                            side: BorderSide(
-                                                color: Colors.black,
-                                                width: 1.0)),
-                                        splashColor: Colors.black,
-                                        onPressed: () {
-                                          Navigator.push(
+                                          splashColor: Colors.black,
+                                          onPressed: () {
+                                            _saveDeviceToken();
+
+                                            Navigator.push(
                                               context,
                                               MaterialPageRoute(
-                                                builder: (context) => Forum(),
-                                              ));
-                                        },
-                                        child: Text(
-                                          "   Forums   ",
-                                          style: TextStyle(
-                                            fontFamily: 'Ubuntu',
-                                            fontWeight: FontWeight.w400,
-                                            fontSize:
-                                                SizeConfig.safeBlockHorizontal *
-                                                    6,
+                                                  builder: (context) =>
+                                                      Notify()),
+                                            );
+                                          },
+                                          child: Text(
+                                            "NOTICE",
+                                            style: TextStyle(
+                                              fontFamily: 'OpenSans',
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: SizeConfig
+                                                      .safeBlockHorizontal *
+                                                  4.6,
+                                            ),
+                                          )),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                          bottom: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              .024),
+                                      width: MediaQuery.of(context).size.width *
+                                          .48,
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              .076,
+                                      child: RaisedButton(
+                                          elevation: 1.2,
+                                          color: Colors.white,
+                                          highlightColor: Colors.blue[300],
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                           ),
-                                        )),
+                                          splashColor: Colors.black,
+                                          onPressed: () {},
+                                          child: Text(
+                                            "STAFF DIRECTORY",
+                                            style: TextStyle(
+                                              fontFamily: 'OpenSans',
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: SizeConfig
+                                                      .safeBlockHorizontal *
+                                                  4.6,
+                                            ),
+                                          )),
+                                    ),
+                                    Container(
+                                      width: MediaQuery.of(context).size.width *
+                                          .48,
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              .076,
+                                      child: RaisedButton(
+                                          elevation: 1.2,
+                                          color: Colors.white,
+                                          highlightColor: Colors.blue[300],
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                          ),
+                                          splashColor: Colors.black,
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) => Forum(),
+                                                ));
+                                          },
+                                          child: Text(
+                                            "FORUM",
+                                            style: TextStyle(
+                                              fontFamily: 'OpenSans',
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: SizeConfig
+                                                      .safeBlockHorizontal *
+                                                  4.6,
+                                            ),
+                                          )),
+                                    ),
                                   ],
                                 ),
                               ),
                             ),
-                            SizedBox(
-                              height: SizeConfig.safeBlockVertical * 2,
-                            ),
-                            Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
+                            Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  Padding(
+                                  Container(
                                     padding: EdgeInsets.only(
-                                        right:
-                                            SizeConfig.safeBlockHorizontal * 3),
-                                    child: FlatButton(
+                                        left:
+                                            MediaQuery.of(context).size.width *
+                                                .00),
+                                    width:
+                                        MediaQuery.of(context).size.width * .48,
+                                    height: MediaQuery.of(context).size.height *
+                                        .076,
+                                    child: RaisedButton(
+                                      elevation: 1.2,
+                                      color: Colors.white,
                                       onPressed: _launchURL3,
                                       highlightColor: Colors.blue[300],
                                       shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          side: BorderSide(
-                                              color: Colors.black, width: 1.0)),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
                                       splashColor: Colors.black,
                                       child: Container(
-                                        height:
-                                            SizeConfig.safeBlockVertical * 6,
-                                        width:
-                                            SizeConfig.safeBlockHorizontal * 20,
-                                        // margin: EdgeInsets.only(
-                                        //     left: SizeConfig.safeBlockHorizontal * 4,
-                                        //     right:SizeConfig.safeBlockHorizontal * 4),
+                                        margin: EdgeInsets.only(
+                                            left: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                .03,
+                                            right: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                .03),
                                         decoration: BoxDecoration(
                                           image: DecorationImage(
                                             image:
                                                 AssetImage("images/moodle.png"),
-                                            fit: BoxFit.scaleDown,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(
-                                        right: SizeConfig.safeBlockHorizontal *
-                                            1.5),
-                                    child: FlatButton(
-                                      highlightColor: Colors.blue[300],
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          side: BorderSide(
-                                              color: Colors.black, width: 1.0)),
-                                      splashColor: Colors.black,
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) => EventC(),
-                                            ));
-                                      },
-                                      child: Container(
-                                        width:
-                                            SizeConfig.safeBlockHorizontal * 20,
-                                        height:
-                                            SizeConfig.safeBlockVertical * 6,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                                AssetImage("images/cecify.png"),
-                                            fit: BoxFit.fitWidth,
+                                            fit: BoxFit.contain,
                                           ),
                                         ),
                                       ),
                                     ),
                                   ),
                                 ]),
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height * .055,
-                            ),
-                            Center(
-                              child: GestureDetector(
-                                onTap: _launchURL2,
-                                child: RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: 'With ',
-                                        style: TextStyle(
-                                            fontFamily: 'Ubuntu',
-                                            fontWeight: FontWeight.w300,
-                                            color: Colors.black,
-                                            fontSize: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                .02),
-                                      ),
-                                      WidgetSpan(
-                                        child: Padding(
-                                          padding: EdgeInsets.symmetric(
-                                              horizontal: 0.0),
-                                          child: Icon(
-                                            EvaIcons.heart,
-                                            color: Colors.red,
-                                          ),
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: ' PRODDEC',
-                                        style: TextStyle(
-                                            fontFamily: 'Ubuntu',
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.amber[700],
-                                            fontSize: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                .02),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            )
                           ],
                         ),
                       );
