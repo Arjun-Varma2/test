@@ -49,7 +49,7 @@ class _ForumState extends State<Forum> {
                 crossAxisCount: 2,
                 children: <Widget>[
                   Stack(
-                    children: <Widget>[
+                    children: [
                       Container(
                         margin: EdgeInsets.all(
                             MediaQuery.of(context).size.height * .01),
@@ -135,7 +135,7 @@ class _ForumState extends State<Forum> {
                     ],
                   ),
                   Stack(
-                    children: <Widget>[
+                    children: [
                       Container(
                         margin: EdgeInsets.all(
                             MediaQuery.of(context).size.height * .01),
@@ -221,7 +221,7 @@ class _ForumState extends State<Forum> {
                     ],
                   ),
                   Stack(
-                    children: <Widget>[
+                    children: [
                       Container(
                         margin: EdgeInsets.all(
                             MediaQuery.of(context).size.height * .01),
@@ -307,7 +307,7 @@ class _ForumState extends State<Forum> {
                     ],
                   ),
                   Stack(
-                    children: <Widget>[
+                    children: [
                       Container(
                         margin: EdgeInsets.all(
                             MediaQuery.of(context).size.height * .01),
@@ -393,7 +393,7 @@ class _ForumState extends State<Forum> {
                     ],
                   ),
                   Stack(
-                    children: <Widget>[
+                    children: [
                       Container(
                         margin: EdgeInsets.all(
                             MediaQuery.of(context).size.height * .01),
@@ -479,7 +479,7 @@ class _ForumState extends State<Forum> {
                     ],
                   ),
                   Stack(
-                    children: <Widget>[
+                    children: [
                       Container(
                         margin: EdgeInsets.all(
                             MediaQuery.of(context).size.height * .01),
@@ -566,7 +566,7 @@ class _ForumState extends State<Forum> {
                     ],
                   ),
                   Stack(
-                    children: <Widget>[
+                    children: [
                       Container(
                         margin: EdgeInsets.all(
                             MediaQuery.of(context).size.height * .01),
@@ -652,7 +652,7 @@ class _ForumState extends State<Forum> {
                     ],
                   ),
                   Stack(
-                    children: <Widget>[
+                    children: [
                       Container(
                         margin: EdgeInsets.all(
                             MediaQuery.of(context).size.height * .01),
@@ -738,7 +738,7 @@ class _ForumState extends State<Forum> {
                     ],
                   ),
                   Stack(
-                    children: <Widget>[
+                    children: [
                       Container(
                         margin: EdgeInsets.all(
                             MediaQuery.of(context).size.height * .01),
