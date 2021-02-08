@@ -24,9 +24,10 @@ class _ForumState extends State<Forum> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Forums',
+          'FORUM',
           style: TextStyle(
-            fontFamily: 'Ubuntu',
+            fontFamily: 'OpenSans',
+            fontSize: 27,
             fontWeight: FontWeight.w700,
             color: Colors.black,
           ),
@@ -40,15 +41,22 @@ class _ForumState extends State<Forum> {
       body: Container(
         child: isLoading
             ? Center(child: CircularProgressIndicator())
-            : ListView(
+            : GridView.count(
+                primary: false,
+                padding: const EdgeInsets.all(20),
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                crossAxisCount: 2,
                 children: <Widget>[
-                  Container(
-                      margin: EdgeInsets.all(
-                          MediaQuery.of(context).size.height * .01),
-                      child: FlatButton(
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(
+                            MediaQuery.of(context).size.height * .01),
+                        child: FlatButton(
                           highlightColor: Colors.amberAccent,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(18),
                               side: BorderSide(
                                 color: Colors.transparent,
                               )),
@@ -59,42 +67,82 @@ class _ForumState extends State<Forum> {
                               MaterialPageRoute(builder: (context) => Event1()),
                             );
                           },
-                          child: Row(children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .04),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width * .2,
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 12,
+                                ),
+                                width: MediaQuery.of(context).size.width * 1,
                                 height:
-                                    MediaQuery.of(context).size.height * .09,
+                                    MediaQuery.of(context).size.height * .16,
                                 child: Image(
                                   image: AssetImage("images/logo.png"),
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 10,
+                        left: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                              child: RaisedButton(
+                                elevation: 1.3,
+                                color: Colors.grey[400],
+                                highlightColor: Colors.amberAccent,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4),
+                                    side: BorderSide(
+                                      color: Colors.grey[400],
+                                    )),
+                                splashColor: Colors.black,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Event1()),
+                                  );
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: 8.0,
+                                      top: 9.0,
+                                      left: 26,
+                                      right: 26),
+                                  child: Container(
+                                    child: Text(
+                                      "PRODDEC",
+                                      style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 5,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .09),
-                              child: Text(
-                                "PRODDEC",
-                                style: TextStyle(
-                                  fontFamily: 'Lekton',
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: SizeConfig.safeBlockHorizontal * 6,
-                                ),
-                              ),
-                            ),
-                          ]))),
-                  Container(
-                      margin: EdgeInsets.all(
-                          MediaQuery.of(context).size.height * .01),
-                      child: FlatButton(
-                          highlightColor: Colors.indigo,
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(
+                            MediaQuery.of(context).size.height * .01),
+                        child: FlatButton(
+                          highlightColor: Colors.amberAccent,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(18),
                               side: BorderSide(
                                 color: Colors.transparent,
                               )),
@@ -105,42 +153,82 @@ class _ForumState extends State<Forum> {
                               MaterialPageRoute(builder: (context) => Event2()),
                             );
                           },
-                          child: Row(children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .04),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width * .2,
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 22,
+                                ),
+                                width: MediaQuery.of(context).size.width * 1,
                                 height:
-                                    MediaQuery.of(context).size.height * .09,
+                                    MediaQuery.of(context).size.height * .15,
                                 child: Image(
                                   image: AssetImage("images/Nss.png"),
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 10,
+                        left: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                              child: RaisedButton(
+                                elevation: 1.3,
+                                color: Colors.grey[400],
+                                highlightColor: Colors.amberAccent,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4),
+                                    side: BorderSide(
+                                      color: Colors.grey[400],
+                                    )),
+                                splashColor: Colors.black,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Event2()),
+                                  );
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: 8.0,
+                                      top: 9.0,
+                                      left: 60,
+                                      right: 60),
+                                  child: Container(
+                                    child: Text(
+                                      "NSS",
+                                      style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 5,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .09),
-                              child: Text(
-                                "NSS",
-                                style: TextStyle(
-                                  fontFamily: 'Lekton',
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: SizeConfig.safeBlockHorizontal * 6,
-                                ),
-                              ),
-                            ),
-                          ]))),
-                  Container(
-                      margin: EdgeInsets.all(
-                          MediaQuery.of(context).size.height * .01),
-                      child: FlatButton(
-                          highlightColor: Colors.blue[300],
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(
+                            MediaQuery.of(context).size.height * .01),
+                        child: FlatButton(
+                          highlightColor: Colors.amberAccent,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(18),
                               side: BorderSide(
                                 color: Colors.transparent,
                               )),
@@ -151,42 +239,82 @@ class _ForumState extends State<Forum> {
                               MaterialPageRoute(builder: (context) => Event4()),
                             );
                           },
-                          child: Row(children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .04),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width * .2,
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 22,
+                                ),
+                                width: MediaQuery.of(context).size.width * 1,
                                 height:
-                                    MediaQuery.of(context).size.height * .09,
+                                    MediaQuery.of(context).size.height * .16,
                                 child: Image(
                                   image: AssetImage("images/Ieee.png"),
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 10,
+                        left: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                              child: RaisedButton(
+                                elevation: 1.3,
+                                color: Colors.grey[400],
+                                highlightColor: Colors.amberAccent,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4),
+                                    side: BorderSide(
+                                      color: Colors.grey[400],
+                                    )),
+                                splashColor: Colors.black,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Event4()),
+                                  );
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: 8.0,
+                                      top: 9.0,
+                                      left: 59,
+                                      right: 58),
+                                  child: Container(
+                                    child: Text(
+                                      "IEEE",
+                                      style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 5,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .09),
-                              child: Text(
-                                "IEEE",
-                                style: TextStyle(
-                                  fontFamily: 'Lekton',
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: SizeConfig.safeBlockHorizontal * 6,
-                                ),
-                              ),
-                            ),
-                          ]))),
-                  Container(
-                      margin: EdgeInsets.all(
-                          MediaQuery.of(context).size.height * .01),
-                      child: FlatButton(
-                          highlightColor: Colors.grey[400],
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(
+                            MediaQuery.of(context).size.height * .01),
+                        child: FlatButton(
+                          highlightColor: Colors.amberAccent,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(18),
                               side: BorderSide(
                                 color: Colors.transparent,
                               )),
@@ -197,42 +325,82 @@ class _ForumState extends State<Forum> {
                               MaterialPageRoute(builder: (context) => Event3()),
                             );
                           },
-                          child: Row(children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .04),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width * .2,
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 12,
+                                ),
+                                width: MediaQuery.of(context).size.width * 1,
                                 height:
-                                    MediaQuery.of(context).size.height * .09,
+                                    MediaQuery.of(context).size.height * .16,
                                 child: Image(
                                   image: AssetImage("images/ncc.png"),
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 10,
+                        left: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                              child: RaisedButton(
+                                elevation: 1.3,
+                                color: Colors.grey[400],
+                                highlightColor: Colors.amberAccent,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4),
+                                    side: BorderSide(
+                                      color: Colors.grey[400],
+                                    )),
+                                splashColor: Colors.black,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Event3()),
+                                  );
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: 8.0,
+                                      top: 9.0,
+                                      left: 58,
+                                      right: 58),
+                                  child: Container(
+                                    child: Text(
+                                      "NCC",
+                                      style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 5,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .09),
-                              child: Text(
-                                "NCC",
-                                style: TextStyle(
-                                  fontFamily: 'Lekton',
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: SizeConfig.safeBlockHorizontal * 6,
-                                ),
-                              ),
-                            ),
-                          ]))),
-                  Container(
-                      margin: EdgeInsets.all(
-                          MediaQuery.of(context).size.height * .01),
-                      child: FlatButton(
-                          highlightColor: Colors.grey[350],
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(
+                            MediaQuery.of(context).size.height * .01),
+                        child: FlatButton(
+                          highlightColor: Colors.amberAccent,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(18),
                               side: BorderSide(
                                 color: Colors.transparent,
                               )),
@@ -243,42 +411,82 @@ class _ForumState extends State<Forum> {
                               MaterialPageRoute(builder: (context) => Event6()),
                             );
                           },
-                          child: Row(children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .04),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width * .2,
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 12,
+                                ),
+                                width: MediaQuery.of(context).size.width * 1,
                                 height:
-                                    MediaQuery.of(context).size.height * .09,
+                                    MediaQuery.of(context).size.height * .16,
                                 child: Image(
                                   image: AssetImage("images/foces.png"),
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.fitWidth,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 10,
+                        left: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                              child: RaisedButton(
+                                elevation: 1.3,
+                                color: Colors.grey[400],
+                                highlightColor: Colors.amberAccent,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4),
+                                    side: BorderSide(
+                                      color: Colors.grey[400],
+                                    )),
+                                splashColor: Colors.black,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Event6()),
+                                  );
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: 8.0,
+                                      top: 9.0,
+                                      left: 46,
+                                      right: 45),
+                                  child: Container(
+                                    child: Text(
+                                      "FOCES",
+                                      style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 5,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .09),
-                              child: Text(
-                                "FOCES",
-                                style: TextStyle(
-                                  fontFamily: 'Lekton',
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: SizeConfig.safeBlockHorizontal * 6,
-                                ),
-                              ),
-                            ),
-                          ]))),
-                  Container(
-                      margin: EdgeInsets.all(
-                          MediaQuery.of(context).size.height * .01),
-                      child: FlatButton(
-                          highlightColor: Colors.blue[300],
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(
+                            MediaQuery.of(context).size.height * .01),
+                        child: FlatButton(
+                          highlightColor: Colors.amberAccent,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(18),
                               side: BorderSide(
                                 color: Colors.transparent,
                               )),
@@ -289,42 +497,83 @@ class _ForumState extends State<Forum> {
                               MaterialPageRoute(builder: (context) => Event5()),
                             );
                           },
-                          child: Row(children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .04),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width * .2,
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 28,
+                                  bottom: 14,
+                                ),
+                                width: MediaQuery.of(context).size.width * 1,
                                 height:
-                                    MediaQuery.of(context).size.height * .09,
+                                    MediaQuery.of(context).size.height * .16,
                                 child: Image(
                                   image: AssetImage("images/iedc.png"),
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 10,
+                        left: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                              child: RaisedButton(
+                                elevation: 1.3,
+                                color: Colors.grey[400],
+                                highlightColor: Colors.amberAccent,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4),
+                                    side: BorderSide(
+                                      color: Colors.grey[400],
+                                    )),
+                                splashColor: Colors.black,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Event5()),
+                                  );
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: 8.0,
+                                      top: 9.0,
+                                      left: 56,
+                                      right: 55),
+                                  child: Container(
+                                    child: Text(
+                                      "IEDC",
+                                      style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 5,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .09),
-                              child: Text(
-                                "IEDC",
-                                style: TextStyle(
-                                  fontFamily: 'Lekton',
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: SizeConfig.safeBlockHorizontal * 6,
-                                ),
-                              ),
-                            ),
-                          ]))),
-                  Container(
-                      margin: EdgeInsets.all(
-                          MediaQuery.of(context).size.height * .01),
-                      child: FlatButton(
-                          highlightColor: Colors.lightBlueAccent,
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(
+                            MediaQuery.of(context).size.height * .01),
+                        child: FlatButton(
+                          highlightColor: Colors.amberAccent,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(18),
                               side: BorderSide(
                                 color: Colors.transparent,
                               )),
@@ -335,42 +584,82 @@ class _ForumState extends State<Forum> {
                               MaterialPageRoute(builder: (context) => Event7()),
                             );
                           },
-                          child: Row(children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .04),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width * .2,
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 12,
+                                ),
+                                width: MediaQuery.of(context).size.width * 1,
                                 height:
-                                    MediaQuery.of(context).size.height * .09,
+                                    MediaQuery.of(context).size.height * .16,
                                 child: Image(
                                   image: AssetImage("images/arc.png"),
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 10,
+                        left: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                              child: RaisedButton(
+                                elevation: 1.3,
+                                color: Colors.grey[400],
+                                highlightColor: Colors.amberAccent,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4),
+                                    side: BorderSide(
+                                      color: Colors.grey[400],
+                                    )),
+                                splashColor: Colors.black,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Event7()),
+                                  );
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: 8.0,
+                                      top: 9.0,
+                                      left: 59,
+                                      right: 59),
+                                  child: Container(
+                                    child: Text(
+                                      "ARC",
+                                      style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 5,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .09),
-                              child: Text(
-                                "ARC",
-                                style: TextStyle(
-                                  fontFamily: 'Lekton',
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: SizeConfig.safeBlockHorizontal * 6,
-                                ),
-                              ),
-                            ),
-                          ]))),
-                  Container(
-                      margin: EdgeInsets.all(
-                          MediaQuery.of(context).size.height * .01),
-                      child: FlatButton(
-                          highlightColor: Colors.brown,
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(
+                            MediaQuery.of(context).size.height * .01),
+                        child: FlatButton(
+                          highlightColor: Colors.amberAccent,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(18),
                               side: BorderSide(
                                 color: Colors.transparent,
                               )),
@@ -381,42 +670,82 @@ class _ForumState extends State<Forum> {
                               MaterialPageRoute(builder: (context) => Event9()),
                             );
                           },
-                          child: Row(children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .04),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width * .2,
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 12,
+                                ),
+                                width: MediaQuery.of(context).size.width * 1,
                                 height:
-                                    MediaQuery.of(context).size.height * .09,
+                                    MediaQuery.of(context).size.height * .16,
                                 child: Image(
                                   image: AssetImage("images/surge.png"),
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 10,
+                        left: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                              child: RaisedButton(
+                                elevation: 1.3,
+                                color: Colors.grey[400],
+                                highlightColor: Colors.amberAccent,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4),
+                                    side: BorderSide(
+                                      color: Colors.grey[400],
+                                    )),
+                                splashColor: Colors.black,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Event9()),
+                                  );
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: 8.0,
+                                      top: 9.0,
+                                      left: 44,
+                                      right: 43),
+                                  child: Container(
+                                    child: Text(
+                                      "SURGE",
+                                      style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 5,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .09),
-                              child: Text(
-                                "SURGE",
-                                style: TextStyle(
-                                  fontFamily: 'Lekton',
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: SizeConfig.safeBlockHorizontal * 6,
-                                ),
-                              ),
-                            ),
-                          ]))),
-                  Container(
-                      margin: EdgeInsets.all(
-                          MediaQuery.of(context).size.height * .01),
-                      child: FlatButton(
-                          highlightColor: Colors.blueGrey,
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(
+                            MediaQuery.of(context).size.height * .01),
+                        child: FlatButton(
+                          highlightColor: Colors.amberAccent,
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(18),
                               side: BorderSide(
                                 color: Colors.transparent,
                               )),
@@ -427,35 +756,74 @@ class _ForumState extends State<Forum> {
                               MaterialPageRoute(builder: (context) => Event8()),
                             );
                           },
-                          child: Row(children: [
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .04),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width * .2,
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(
+                                  top: 20,
+                                  bottom: 10,
+                                ),
+                                width: MediaQuery.of(context).size.width * 1,
                                 height:
-                                    MediaQuery.of(context).size.height * .09,
+                                    MediaQuery.of(context).size.height * .16,
                                 child: Image(
                                   image: AssetImage("images/exess.png"),
-                                  fit: BoxFit.fill,
+                                  fit: BoxFit.fitHeight,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 10,
+                        left: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Container(
+                              child: RaisedButton(
+                                elevation: 1.3,
+                                color: Colors.grey[400],
+                                highlightColor: Colors.amberAccent,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(4),
+                                    side: BorderSide(
+                                      color: Colors.grey[400],
+                                    )),
+                                splashColor: Colors.black,
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Event8()),
+                                  );
+                                },
+                                child: Padding(
+                                  padding: const EdgeInsets.only(
+                                      bottom: 8.0,
+                                      top: 9.0,
+                                      left: 49,
+                                      right: 48),
+                                  child: Container(
+                                    child: Text(
+                                      "EXESS",
+                                      style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        fontWeight: FontWeight.w400,
+                                        fontSize:
+                                            SizeConfig.safeBlockHorizontal * 5,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(
-                                  left:
-                                      MediaQuery.of(context).size.width * .09),
-                              child: Text(
-                                "EXESS",
-                                style: TextStyle(
-                                  fontFamily: 'Lekton',
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: SizeConfig.safeBlockHorizontal * 6,
-                                ),
-                              ),
-                            ),
-                          ]))),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
       ),

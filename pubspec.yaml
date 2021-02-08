@@ -105,6 +105,8 @@ flutter:
       fonts:
         - asset: font/OpenSans/OpenSans-Regular.ttf
           weight: 400
+        - asset: font/OpenSans/OpenSans-Bold.ttf
+          weight: 700
 
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
