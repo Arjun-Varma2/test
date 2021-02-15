@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proddeccec/Screen/Forum.dart';
+import 'package:proddeccec/Screen/department.dart';
 //import 'package:proddeccec/Screen/proddec.dart';
 import 'package:proddeccec/Screen/notification/notification.dart';
 import 'package:proddeccec/backend/size_config.dart';
@@ -174,7 +175,14 @@ class _FirstPageState extends State<FirstPage> {
                                                 BorderRadius.circular(10),
                                           ),
                                           splashColor: Colors.black,
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      Department(),
+                                                ));
+                                          },
                                           child: Text(
                                             "STAFF DIRECTORY",
                                             style: TextStyle(
