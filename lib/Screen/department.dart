@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'staffDirectory/aeDepartmentStaff.dart';
+import 'staffDirectory/csDepartmentStaff.dart';
+
+import 'staffDirectory/ecDepartmentStaff.dart';
+import 'staffDirectory/eeDepartmentStaff.dart';
+import 'staffDirectory/geDepartmentStaff.dart';
 
 class Department extends StatelessWidget {
   @override
@@ -21,12 +27,11 @@ class Department extends StatelessWidget {
         ),
       ),
       body: Container(
-        child: Center(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                //Padding(padding: EdgeInsets.only(top: )),
-                /*AppBar(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              //Padding(padding: EdgeInsets.only(top: )),
+              /*AppBar(
                   title: Center(
                       child: Text(
                     'Departments',
@@ -35,21 +40,29 @@ class Department extends StatelessWidget {
                   backgroundColor: Colors.white,
                   shadowColor: Colors.white,
                 ),*/
-
-                Card(
-                  elevation: 0,
-                  margin: new EdgeInsets.symmetric(
-                      horizontal: 40.0, vertical: 20.0),
-                  child: Column(
-                    //mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Container(
-                        height: 50,
-                        child: ListTile(
-                          tileColor: Colors.grey[400],
-                          title: Padding(
-                            padding: EdgeInsets.only(bottom: 6, top: 0),
-                            child: Center(
+              SizedBox(height: 25),
+              Card(
+                elevation: 0,
+                margin:
+                    new EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                child: Column(
+                  //mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Container(
+                      height: 50,
+                      child: ListTile(
+                        tileColor: Colors.grey[400],
+                        title: Padding(
+                          padding: EdgeInsets.only(bottom: 6, top: 0),
+                          child: Center(
+                            child: FlatButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => CSDepartment()),
+                                );
+                              },
                               child: Text(
                                 'Computer Science Engineering',
                                 style: TextStyle(
@@ -61,63 +74,80 @@ class Department extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Row(
-                        children: <Widget>[
-                          Container(
-                            height: 47,
-                            width: 240,
-                            child: RaisedButton(
-                              color: Colors.white,
-                              elevation: 1.3,
-                              child: Text(
-                                'HoD : Dr Smitha Dharan',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Container(
+                          height: 47,
+                          width: 240,
+                          child: RaisedButton(
+                            color: Colors.white,
+                            elevation: 1.3,
+                            child: Text(
+                              'HoD : Dr Smitha Dharan',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
                               ),
-                              onPressed: () {
-                                print('Pressed');
-                              },
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CSDepartment()),
+                              );
+                            },
                           ),
-                          Container(
-                            height: 47,
-                            width: 160,
-                            child: RaisedButton(
-                              color: Colors.white,
-                              elevation: 1.3,
-                              child: Text(
-                                'Faculty',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                        ),
+                        Container(
+                          height: 47,
+                          width: 160,
+                          child: RaisedButton(
+                            color: Colors.white,
+                            elevation: 1.3,
+                            child: Text(
+                              'Faculty',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
                               ),
-                              onPressed: () {
-                                print('Pressed');
-                              },
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CSDepartment()),
+                              );
+                            },
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                Card(
-                  elevation: 0,
-                  margin: new EdgeInsets.symmetric(
-                      horizontal: 40.0, vertical: 20.0),
-                  child: Column(
-                    //mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Container(
-                        height: 50,
-                        child: ListTile(
-                          tileColor: Colors.grey[400],
-                          title: Padding(
-                            padding: EdgeInsets.only(bottom: 6, top: 0),
-                            child: Center(
+              ),
+              Card(
+                elevation: 0,
+                margin:
+                    new EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                child: Column(
+                  //mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Container(
+                      height: 50,
+                      child: ListTile(
+                        tileColor: Colors.grey[400],
+                        title: Padding(
+                          padding: EdgeInsets.only(bottom: 6, top: 0),
+                          child: Center(
+                            child: FlatButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ECDepartment()),
+                                );
+                              },
                               child: Text(
                                 'Electronics Engineering',
                                 style: TextStyle(
@@ -129,63 +159,80 @@ class Department extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Row(
-                        children: <Widget>[
-                          Container(
-                            height: 47,
-                            width: 240,
-                            child: RaisedButton(
-                              color: Colors.white,
-                              elevation: 1.3,
-                              child: Text(
-                                'HoD : Dr.Laila D',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Container(
+                          height: 47,
+                          width: 240,
+                          child: RaisedButton(
+                            color: Colors.white,
+                            elevation: 1.3,
+                            child: Text(
+                              'HoD : Dr.Laila D',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
                               ),
-                              onPressed: () {
-                                print('Pressed');
-                              },
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ECDepartment()),
+                              );
+                            },
                           ),
-                          Container(
-                            height: 47,
-                            width: 160,
-                            child: RaisedButton(
-                              color: Colors.white,
-                              elevation: 1.3,
-                              child: Text(
-                                'Faculty',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                        ),
+                        Container(
+                          height: 47,
+                          width: 160,
+                          child: RaisedButton(
+                            color: Colors.white,
+                            elevation: 1.3,
+                            child: Text(
+                              'Faculty',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
                               ),
-                              onPressed: () {
-                                print('Pressed');
-                              },
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ECDepartment()),
+                              );
+                            },
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                Card(
-                  elevation: 0,
-                  margin: new EdgeInsets.symmetric(
-                      horizontal: 40.0, vertical: 20.0),
-                  child: Column(
-                    //mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Container(
-                        height: 50,
-                        child: ListTile(
-                          tileColor: Colors.grey[400],
-                          title: Padding(
-                            padding: EdgeInsets.only(bottom: 6, top: 0),
-                            child: Center(
+              ),
+              Card(
+                elevation: 0,
+                margin:
+                    new EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                child: Column(
+                  //mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Container(
+                      height: 50,
+                      child: ListTile(
+                        tileColor: Colors.grey[400],
+                        title: Padding(
+                          padding: EdgeInsets.only(bottom: 6, top: 0),
+                          child: Center(
+                            child: FlatButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => EEDepartment()),
+                                );
+                              },
                               child: Text(
                                 'Electrical Engineering',
                                 style: TextStyle(
@@ -197,63 +244,80 @@ class Department extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Row(
-                        children: <Widget>[
-                          Container(
-                            height: 47,
-                            width: 240,
-                            child: RaisedButton(
-                              color: Colors.white,
-                              elevation: 1.3,
-                              child: Text(
-                                'HoD : Dr.Bindu C J',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Container(
+                          height: 47,
+                          width: 240,
+                          child: RaisedButton(
+                            color: Colors.white,
+                            elevation: 1.3,
+                            child: Text(
+                              'HoD : Dr.Bindu C J',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
                               ),
-                              onPressed: () {
-                                print('Pressed');
-                              },
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => EEDepartment()),
+                              );
+                            },
                           ),
-                          Container(
-                            height: 47,
-                            width: 160,
-                            child: RaisedButton(
-                              color: Colors.white,
-                              elevation: 1.3,
-                              child: Text(
-                                'Faculty',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                        ),
+                        Container(
+                          height: 47,
+                          width: 160,
+                          child: RaisedButton(
+                            color: Colors.white,
+                            elevation: 1.3,
+                            child: Text(
+                              'Faculty',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
                               ),
-                              onPressed: () {
-                                print('Pressed');
-                              },
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => EEDepartment()),
+                              );
+                            },
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                Card(
-                  elevation: 0,
-                  margin: new EdgeInsets.symmetric(
-                      horizontal: 40.0, vertical: 20.0),
-                  child: Column(
-                    //mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Container(
-                        height: 50,
-                        child: ListTile(
-                          tileColor: Colors.grey[400],
-                          title: Padding(
-                            padding: EdgeInsets.only(bottom: 6, top: 0),
-                            child: Center(
+              ),
+              Card(
+                elevation: 0,
+                margin:
+                    new EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                child: Column(
+                  //mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Container(
+                      height: 50,
+                      child: ListTile(
+                        tileColor: Colors.grey[400],
+                        title: Padding(
+                          padding: EdgeInsets.only(bottom: 6, top: 0),
+                          child: Center(
+                            child: FlatButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => GEDepartment()),
+                                );
+                              },
                               child: Text(
                                 'General Engineering',
                                 style: TextStyle(
@@ -265,63 +329,80 @@ class Department extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Row(
-                        children: <Widget>[
-                          Container(
-                            height: 47,
-                            width: 240,
-                            child: RaisedButton(
-                              color: Colors.white,
-                              elevation: 1.3,
-                              child: Text(
-                                'HoD : Dr.Ashok Kumar T V',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Container(
+                          height: 47,
+                          width: 240,
+                          child: RaisedButton(
+                            color: Colors.white,
+                            elevation: 1.3,
+                            child: Text(
+                              'HoD : Dr.Ashok Kumar T V',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
                               ),
-                              onPressed: () {
-                                print('Pressed');
-                              },
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => GEDepartment()),
+                              );
+                            },
                           ),
-                          Container(
-                            height: 47,
-                            width: 160,
-                            child: RaisedButton(
-                              color: Colors.white,
-                              elevation: 1.3,
-                              child: Text(
-                                'Faculty',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                        ),
+                        Container(
+                          height: 47,
+                          width: 160,
+                          child: RaisedButton(
+                            color: Colors.white,
+                            elevation: 1.3,
+                            child: Text(
+                              'Faculty',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
                               ),
-                              onPressed: () {
-                                print('Pressed');
-                              },
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => GEDepartment()),
+                              );
+                            },
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                Card(
-                  elevation: 0,
-                  margin: new EdgeInsets.symmetric(
-                      horizontal: 40.0, vertical: 20.0),
-                  child: Column(
-                    //mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Container(
-                        height: 50,
-                        child: ListTile(
-                          tileColor: Colors.grey[400],
-                          title: Padding(
-                            padding: EdgeInsets.only(bottom: 6, top: 0),
-                            child: Center(
+              ),
+              Card(
+                elevation: 0,
+                margin:
+                    new EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                child: Column(
+                  //mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Container(
+                      height: 50,
+                      child: ListTile(
+                        tileColor: Colors.grey[400],
+                        title: Padding(
+                          padding: EdgeInsets.only(bottom: 6, top: 0),
+                          child: Center(
+                            child: FlatButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => AEDepartment()),
+                                );
+                              },
                               child: Text(
                                 'Applied Science',
                                 style: TextStyle(
@@ -333,52 +414,60 @@ class Department extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Row(
-                        children: <Widget>[
-                          Container(
-                            height: 47,
-                            width: 240,
-                            child: RaisedButton(
-                              color: Colors.white,
-                              elevation: 1.3,
-                              child: Text(
-                                'HoD : Dr.Madhusoodhanan\nNair R',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Container(
+                          height: 47,
+                          width: 240,
+                          child: RaisedButton(
+                            color: Colors.white,
+                            elevation: 1.3,
+                            child: Text(
+                              'HoD : Dr.Madhusoodhanan\nNair R',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w400,
                               ),
-                              onPressed: () {
-                                print('Pressed');
-                              },
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => AEDepartment()),
+                              );
+                            },
                           ),
-                          Container(
-                            height: 47,
-                            width: 160,
-                            child: RaisedButton(
-                              color: Colors.white,
-                              elevation: 1.3,
-                              child: Text(
-                                'Faculty',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
+                        ),
+                        Container(
+                          height: 47,
+                          width: 160,
+                          child: RaisedButton(
+                            color: Colors.white,
+                            elevation: 1.3,
+                            child: Text(
+                              'Faculty',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
                               ),
-                              onPressed: () {
-                                print('Pressed');
-                              },
                             ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => AEDepartment()),
+                              );
+                            },
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
