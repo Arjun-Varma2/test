@@ -40,6 +40,8 @@ dependencies:
   flutter_native_image: ^0.0.5
   change_app_package_name: ^0.1.2
 
+  expand_widget: ^1.2.0+1
+  expansion_tile_card: ^2.0.0
   # firebase_auth: ^0.6.6
   #firebase_database:
 
@@ -103,10 +105,26 @@ flutter:
           weight: 400
     - family: OpenSans
       fonts:
-        - asset: font/OpenSans/OpenSans-Regular.ttf
-          weight: 400
+        - asset: font/OpenSans/OpenSans-ExtraBoldItalic.ttf
+          weight: 800
+        - asset: font/OpenSans/OpenSans-ExtraBold.ttf
+          weight: 800
+        - asset: font/OpenSans/OpenSans-BoldItalic.ttf
+          weight: 700
         - asset: font/OpenSans/OpenSans-Bold.ttf
           weight: 700
+        - asset: font/OpenSans/OpenSans-SemiBoldItalic.ttf
+          weight: 600
+        - asset: font/OpenSans/OpenSans-SemiBold.ttf
+          weight: 600
+        - asset: font/OpenSans/OpenSans-Regular.ttf
+          weight: 400
+        - asset: font/OpenSans/OpenSans-Italic.ttf
+          weight: 400
+        - asset: font/OpenSans/OpenSans-LightItalic.ttf
+          weight: 300
+        - asset: font/OpenSans/OpenSans-Light.ttf
+          weight: 300
 
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700

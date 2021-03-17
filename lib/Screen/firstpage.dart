@@ -5,10 +5,9 @@ import 'package:proddeccec/Screen/department.dart';
 import 'package:proddeccec/Screen/notification/notification.dart';
 import 'package:proddeccec/backend/size_config.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:proddeccec/Screen/forum/addEvent/cecify/cecify.dart';
 
 final FirebaseFirestore _db = FirebaseFirestore.instance;
 final FirebaseMessaging _fcm = FirebaseMessaging();
