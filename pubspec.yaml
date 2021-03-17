@@ -41,6 +41,7 @@ dependencies:
   change_app_package_name: ^0.1.2
 
   expand_widget: ^1.2.0+1
+  expansion_tile_card: ^2.0.0
   # firebase_auth: ^0.6.6
   #firebase_database:
 
