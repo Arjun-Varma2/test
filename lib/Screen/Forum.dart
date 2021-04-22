@@ -39,6 +39,8 @@ class _ForumState extends State<Forum> {
         ),
       ),
       body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
         child: isLoading
             ? Center(child: CircularProgressIndicator())
             : GridView.count(
@@ -86,8 +88,8 @@ class _ForumState extends State<Forum> {
                         ),
                       ),
                       Positioned(
-                        bottom: 10,
-                        left: 10,
+                        bottom: MediaQuery.of(context).size.height * .012,
+                        left: MediaQuery.of(context).size.height * .010,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -110,19 +112,27 @@ class _ForumState extends State<Forum> {
                                   );
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 8.0,
-                                      top: 9.0,
-                                      left: 26,
-                                      right: 26),
+                                  padding: EdgeInsets.only(
+                                      bottom:
+                                          MediaQuery.of(context).size.height *
+                                              .009,
+                                      top: MediaQuery.of(context).size.height *
+                                          .009,
+                                      left: MediaQuery.of(context).size.width *
+                                          .052,
+                                      right: MediaQuery.of(context).size.width *
+                                          .052),
                                   child: Container(
-                                    child: Text(
-                                      "PRODDEC",
-                                      style: TextStyle(
-                                        fontFamily: 'OpenSans',
-                                        fontWeight: FontWeight.w400,
-                                        fontSize:
-                                            SizeConfig.safeBlockHorizontal * 5,
+                                    child: Center(
+                                      child: Text(
+                                        "PRODDEC",
+                                        style: TextStyle(
+                                          fontFamily: 'OpenSans',
+                                          fontWeight: FontWeight.w400,
+                                          fontSize:
+                                              SizeConfig.safeBlockHorizontal *
+                                                  5,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -157,7 +167,8 @@ class _ForumState extends State<Forum> {
                             children: [
                               Container(
                                 padding: EdgeInsets.only(
-                                  top: 22,
+                                  top:
+                                      MediaQuery.of(context).size.height * .022,
                                 ),
                                 width: MediaQuery.of(context).size.width * 1,
                                 height:
@@ -172,8 +183,8 @@ class _ForumState extends State<Forum> {
                         ),
                       ),
                       Positioned(
-                        bottom: 10,
-                        left: 10,
+                        bottom: MediaQuery.of(context).size.height * .012,
+                        left: MediaQuery.of(context).size.height * .010,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -196,19 +207,27 @@ class _ForumState extends State<Forum> {
                                   );
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 8.0,
-                                      top: 9.0,
-                                      left: 60,
-                                      right: 60),
+                                  padding: EdgeInsets.only(
+                                      bottom:
+                                          MediaQuery.of(context).size.height *
+                                              .009,
+                                      top: MediaQuery.of(context).size.height *
+                                          .009,
+                                      left: MediaQuery.of(context).size.width *
+                                          .122,
+                                      right: MediaQuery.of(context).size.width *
+                                          .122),
                                   child: Container(
-                                    child: Text(
-                                      "NSS",
-                                      style: TextStyle(
-                                        fontFamily: 'OpenSans',
-                                        fontWeight: FontWeight.w400,
-                                        fontSize:
-                                            SizeConfig.safeBlockHorizontal * 5,
+                                    child: Center(
+                                      child: Text(
+                                        "NSS",
+                                        style: TextStyle(
+                                          fontFamily: 'OpenSans',
+                                          fontWeight: FontWeight.w400,
+                                          fontSize:
+                                              SizeConfig.safeBlockHorizontal *
+                                                  5,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -243,7 +262,8 @@ class _ForumState extends State<Forum> {
                             children: [
                               Container(
                                 padding: EdgeInsets.only(
-                                  top: 22,
+                                  top:
+                                      MediaQuery.of(context).size.height * .022,
                                 ),
                                 width: MediaQuery.of(context).size.width * 1,
                                 height:
@@ -258,8 +278,8 @@ class _ForumState extends State<Forum> {
                         ),
                       ),
                       Positioned(
-                        bottom: 10,
-                        left: 10,
+                        bottom: MediaQuery.of(context).size.height * .012,
+                        left: MediaQuery.of(context).size.height * .010,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -282,19 +302,27 @@ class _ForumState extends State<Forum> {
                                   );
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 8.0,
-                                      top: 9.0,
-                                      left: 59,
-                                      right: 58),
+                                  padding: EdgeInsets.only(
+                                      bottom:
+                                          MediaQuery.of(context).size.height *
+                                              .009,
+                                      top: MediaQuery.of(context).size.height *
+                                          .009,
+                                      left: MediaQuery.of(context).size.width *
+                                          .122,
+                                      right: MediaQuery.of(context).size.width *
+                                          .122),
                                   child: Container(
-                                    child: Text(
-                                      "IEEE",
-                                      style: TextStyle(
-                                        fontFamily: 'OpenSans',
-                                        fontWeight: FontWeight.w400,
-                                        fontSize:
-                                            SizeConfig.safeBlockHorizontal * 5,
+                                    child: Center(
+                                      child: Text(
+                                        "IEEE",
+                                        style: TextStyle(
+                                          fontFamily: 'OpenSans',
+                                          fontWeight: FontWeight.w400,
+                                          fontSize:
+                                              SizeConfig.safeBlockHorizontal *
+                                                  5,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -329,7 +357,8 @@ class _ForumState extends State<Forum> {
                             children: [
                               Container(
                                 padding: EdgeInsets.only(
-                                  top: 12,
+                                  top:
+                                      MediaQuery.of(context).size.height * .022,
                                 ),
                                 width: MediaQuery.of(context).size.width * 1,
                                 height:
@@ -344,8 +373,8 @@ class _ForumState extends State<Forum> {
                         ),
                       ),
                       Positioned(
-                        bottom: 10,
-                        left: 10,
+                        bottom: MediaQuery.of(context).size.height * .012,
+                        left: MediaQuery.of(context).size.height * .010,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -368,19 +397,27 @@ class _ForumState extends State<Forum> {
                                   );
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 8.0,
-                                      top: 9.0,
-                                      left: 58,
-                                      right: 58),
+                                  padding: EdgeInsets.only(
+                                      bottom:
+                                          MediaQuery.of(context).size.height *
+                                              .009,
+                                      top: MediaQuery.of(context).size.height *
+                                          .009,
+                                      left: MediaQuery.of(context).size.width *
+                                          .118,
+                                      right: MediaQuery.of(context).size.width *
+                                          .118),
                                   child: Container(
-                                    child: Text(
-                                      "NCC",
-                                      style: TextStyle(
-                                        fontFamily: 'OpenSans',
-                                        fontWeight: FontWeight.w400,
-                                        fontSize:
-                                            SizeConfig.safeBlockHorizontal * 5,
+                                    child: Center(
+                                      child: Text(
+                                        "NCC",
+                                        style: TextStyle(
+                                          fontFamily: 'OpenSans',
+                                          fontWeight: FontWeight.w400,
+                                          fontSize:
+                                              SizeConfig.safeBlockHorizontal *
+                                                  5,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -415,7 +452,8 @@ class _ForumState extends State<Forum> {
                             children: [
                               Container(
                                 padding: EdgeInsets.only(
-                                  top: 12,
+                                  top:
+                                      MediaQuery.of(context).size.height * .022,
                                 ),
                                 width: MediaQuery.of(context).size.width * 1,
                                 height:
@@ -430,8 +468,8 @@ class _ForumState extends State<Forum> {
                         ),
                       ),
                       Positioned(
-                        bottom: 10,
-                        left: 10,
+                        bottom: MediaQuery.of(context).size.height * .012,
+                        left: MediaQuery.of(context).size.height * .010,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -454,11 +492,16 @@ class _ForumState extends State<Forum> {
                                   );
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 8.0,
-                                      top: 9.0,
-                                      left: 46,
-                                      right: 45),
+                                  padding: EdgeInsets.only(
+                                      bottom:
+                                          MediaQuery.of(context).size.height *
+                                              .009,
+                                      top: MediaQuery.of(context).size.height *
+                                          .009,
+                                      left: MediaQuery.of(context).size.width *
+                                          .096,
+                                      right: MediaQuery.of(context).size.width *
+                                          .096),
                                   child: Container(
                                     child: Text(
                                       "FOCES",
@@ -501,8 +544,10 @@ class _ForumState extends State<Forum> {
                             children: [
                               Container(
                                 padding: EdgeInsets.only(
-                                  top: 28,
-                                  bottom: 14,
+                                  top:
+                                      MediaQuery.of(context).size.height * .042,
+                                  bottom:
+                                      MediaQuery.of(context).size.height * .024,
                                 ),
                                 width: MediaQuery.of(context).size.width * 1,
                                 height:
@@ -517,8 +562,8 @@ class _ForumState extends State<Forum> {
                         ),
                       ),
                       Positioned(
-                        bottom: 10,
-                        left: 10,
+                        bottom: MediaQuery.of(context).size.height * .012,
+                        left: MediaQuery.of(context).size.height * .010,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -541,19 +586,27 @@ class _ForumState extends State<Forum> {
                                   );
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 8.0,
-                                      top: 9.0,
-                                      left: 56,
-                                      right: 55),
+                                  padding: EdgeInsets.only(
+                                      bottom:
+                                          MediaQuery.of(context).size.height *
+                                              .009,
+                                      top: MediaQuery.of(context).size.height *
+                                          .009,
+                                      left: MediaQuery.of(context).size.width *
+                                          .118,
+                                      right: MediaQuery.of(context).size.width *
+                                          .118),
                                   child: Container(
-                                    child: Text(
-                                      "IEDC",
-                                      style: TextStyle(
-                                        fontFamily: 'OpenSans',
-                                        fontWeight: FontWeight.w400,
-                                        fontSize:
-                                            SizeConfig.safeBlockHorizontal * 5,
+                                    child: Center(
+                                      child: Text(
+                                        "IEDC",
+                                        style: TextStyle(
+                                          fontFamily: 'OpenSans',
+                                          fontWeight: FontWeight.w400,
+                                          fontSize:
+                                              SizeConfig.safeBlockHorizontal *
+                                                  5,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -588,7 +641,8 @@ class _ForumState extends State<Forum> {
                             children: [
                               Container(
                                 padding: EdgeInsets.only(
-                                  top: 12,
+                                  top:
+                                      MediaQuery.of(context).size.height * .022,
                                 ),
                                 width: MediaQuery.of(context).size.width * 1,
                                 height:
@@ -603,8 +657,8 @@ class _ForumState extends State<Forum> {
                         ),
                       ),
                       Positioned(
-                        bottom: 10,
-                        left: 10,
+                        bottom: MediaQuery.of(context).size.height * .012,
+                        left: MediaQuery.of(context).size.height * .010,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -627,19 +681,27 @@ class _ForumState extends State<Forum> {
                                   );
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 8.0,
-                                      top: 9.0,
-                                      left: 59,
-                                      right: 59),
+                                  padding: EdgeInsets.only(
+                                      bottom:
+                                          MediaQuery.of(context).size.height *
+                                              .009,
+                                      top: MediaQuery.of(context).size.height *
+                                          .009,
+                                      left: MediaQuery.of(context).size.width *
+                                          .122,
+                                      right: MediaQuery.of(context).size.width *
+                                          .122),
                                   child: Container(
-                                    child: Text(
-                                      "ARC",
-                                      style: TextStyle(
-                                        fontFamily: 'OpenSans',
-                                        fontWeight: FontWeight.w400,
-                                        fontSize:
-                                            SizeConfig.safeBlockHorizontal * 5,
+                                    child: Center(
+                                      child: Text(
+                                        "ARC",
+                                        style: TextStyle(
+                                          fontFamily: 'OpenSans',
+                                          fontWeight: FontWeight.w400,
+                                          fontSize:
+                                              SizeConfig.safeBlockHorizontal *
+                                                  5,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -674,7 +736,8 @@ class _ForumState extends State<Forum> {
                             children: [
                               Container(
                                 padding: EdgeInsets.only(
-                                  top: 12,
+                                  top:
+                                      MediaQuery.of(context).size.height * .022,
                                 ),
                                 width: MediaQuery.of(context).size.width * 1,
                                 height:
@@ -689,8 +752,8 @@ class _ForumState extends State<Forum> {
                         ),
                       ),
                       Positioned(
-                        bottom: 10,
-                        left: 10,
+                        bottom: MediaQuery.of(context).size.height * .012,
+                        left: MediaQuery.of(context).size.height * .010,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -713,19 +776,27 @@ class _ForumState extends State<Forum> {
                                   );
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 8.0,
-                                      top: 9.0,
-                                      left: 44,
-                                      right: 43),
+                                  padding: EdgeInsets.only(
+                                      bottom:
+                                          MediaQuery.of(context).size.height *
+                                              .009,
+                                      top: MediaQuery.of(context).size.height *
+                                          .009,
+                                      left: MediaQuery.of(context).size.width *
+                                          .096,
+                                      right: MediaQuery.of(context).size.width *
+                                          .096),
                                   child: Container(
-                                    child: Text(
-                                      "SURGE",
-                                      style: TextStyle(
-                                        fontFamily: 'OpenSans',
-                                        fontWeight: FontWeight.w400,
-                                        fontSize:
-                                            SizeConfig.safeBlockHorizontal * 5,
+                                    child: Center(
+                                      child: Text(
+                                        "SURGE",
+                                        style: TextStyle(
+                                          fontFamily: 'OpenSans',
+                                          fontWeight: FontWeight.w400,
+                                          fontSize:
+                                              SizeConfig.safeBlockHorizontal *
+                                                  5,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -760,8 +831,10 @@ class _ForumState extends State<Forum> {
                             children: [
                               Container(
                                 padding: EdgeInsets.only(
-                                  top: 20,
-                                  bottom: 10,
+                                  top:
+                                      MediaQuery.of(context).size.height * .022,
+                                  bottom:
+                                      MediaQuery.of(context).size.height * .022,
                                 ),
                                 width: MediaQuery.of(context).size.width * 1,
                                 height:
@@ -776,8 +849,8 @@ class _ForumState extends State<Forum> {
                         ),
                       ),
                       Positioned(
-                        bottom: 10,
-                        left: 10,
+                        bottom: MediaQuery.of(context).size.height * .012,
+                        left: MediaQuery.of(context).size.height * .010,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
@@ -800,19 +873,27 @@ class _ForumState extends State<Forum> {
                                   );
                                 },
                                 child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      bottom: 8.0,
-                                      top: 9.0,
-                                      left: 49,
-                                      right: 48),
+                                  padding: EdgeInsets.only(
+                                      bottom:
+                                          MediaQuery.of(context).size.height *
+                                              .009,
+                                      top: MediaQuery.of(context).size.height *
+                                          .009,
+                                      left: MediaQuery.of(context).size.width *
+                                          .096,
+                                      right: MediaQuery.of(context).size.width *
+                                          .096),
                                   child: Container(
-                                    child: Text(
-                                      "EXESS",
-                                      style: TextStyle(
-                                        fontFamily: 'OpenSans',
-                                        fontWeight: FontWeight.w400,
-                                        fontSize:
-                                            SizeConfig.safeBlockHorizontal * 5,
+                                    child: Center(
+                                      child: Text(
+                                        "EXESS",
+                                        style: TextStyle(
+                                          fontFamily: 'OpenSans',
+                                          fontWeight: FontWeight.w400,
+                                          fontSize:
+                                              SizeConfig.safeBlockHorizontal *
+                                                  5,
+                                        ),
                                       ),
                                     ),
                                   ),

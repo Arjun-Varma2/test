@@ -10,7 +10,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 final FirebaseFirestore _db = FirebaseFirestore.instance;
-final FirebaseMessaging _fcm = FirebaseMessaging();
+final FirebaseMessaging _fcm = FirebaseMessaging.instance;
 
 //FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
 

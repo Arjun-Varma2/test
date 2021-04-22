@@ -57,9 +57,9 @@ class _NotifyState extends State<Notify> {
                           fontSize: 25.0)));
             } else {
               return ListView.builder(
-                  itemCount: snapshot.data.documents.length,
+                  itemCount: snapshot.data.docs.length,
                   itemBuilder: (context, index) {
-                    DocumentSnapshot myNotify = snapshot.data.documents[index];
+                    DocumentSnapshot myNotify = snapshot.data.docs[index];
 
                     _launchURL1() async {
                       final url = myNotify.data()['link1'];

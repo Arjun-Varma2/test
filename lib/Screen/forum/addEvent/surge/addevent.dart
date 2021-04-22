@@ -40,8 +40,8 @@ class _ProfilePageState extends State<ProfilePage> {
           final FirebaseStorage storage = FirebaseStorage.instance;
           final String picture =
               "${DateTime.now().millisecondsSinceEpoch.toString()}.jpg";
-          StorageUploadTask task = storage.ref().child(picture).putFile(_image);
-          task.onComplete.then((snapshot) async {
+          UploadTask task = storage.ref().child(picture).putFile(_image);
+          task.then((snapshot) async {
             imageUrl = await snapshot.ref.getDownloadURL();
             String imageL = imageUrl;
             eventService.uploadDetails(
