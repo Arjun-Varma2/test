@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proddeccec/backend/size_config.dart';
 import 'staffDirectory/aeDepartmentStaff.dart';
 import 'staffDirectory/csDepartmentStaff.dart';
 
@@ -15,7 +16,7 @@ class Department extends StatelessWidget {
           'DEPARTMENTS',
           style: TextStyle(
             fontFamily: 'OpenSans',
-            fontSize: 27,
+            fontSize: SizeConfig.safeBlockHorizontal * 5.8,
             fontWeight: FontWeight.w600,
             color: Colors.black,
           ),
@@ -40,22 +41,65 @@ class Department extends StatelessWidget {
                   backgroundColor: Colors.white,
                   shadowColor: Colors.white,
                 ),*/
-              SizedBox(height: 25),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.023),
               Card(
                 elevation: 0,
-                margin:
-                    new EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                margin: new EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.height * 0.045,
+                    vertical: MediaQuery.of(context).size.height * 0.030),
                 child: Column(
                   //mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Container(
-                      height: 50,
+                      height: MediaQuery.of(context).size.height * 0.060,
                       child: ListTile(
                         tileColor: Colors.grey[400],
-                        title: Padding(
-                          padding: EdgeInsets.only(bottom: 6, top: 0),
-                          child: Center(
-                            child: FlatButton(
+                        title: FittedBox(
+                          child: Padding(
+                            padding: EdgeInsets.only(bottom: 6, top: 0),
+                            child: Container(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.057,
+                              child: FlatButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => CSDepartment()),
+                                  );
+                                },
+                                child: Text(
+                                  'Computer Science Engineering',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize:
+                                          SizeConfig.safeBlockHorizontal * 4.8,
+                                      fontFamily: 'OpenSans'),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Flexible(
+                          flex: 6,
+                          fit: FlexFit.tight,
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.057,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              elevation: 1.3,
+                              child: Text(
+                                'HoD : Dr Smitha Dharan',
+                                style: TextStyle(
+                                  fontSize:
+                                      SizeConfig.safeBlockHorizontal * 2.9,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
                               onPressed: () {
                                 Navigator.push(
                                   context,
@@ -63,62 +107,33 @@ class Department extends StatelessWidget {
                                       builder: (context) => CSDepartment()),
                                 );
                               },
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 4,
+                          fit: FlexFit.tight,
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.057,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              elevation: 1.3,
                               child: Text(
-                                'Computer Science Engineering',
+                                'Faculty',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 22,
-                                    fontFamily: 'OpenSans'),
+                                  fontSize:
+                                      SizeConfig.safeBlockHorizontal * 2.9,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => CSDepartment()),
+                                );
+                              },
                             ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Container(
-                          height: 47,
-                          width: 240,
-                          child: RaisedButton(
-                            color: Colors.white,
-                            elevation: 1.3,
-                            child: Text(
-                              'HoD : Dr Smitha Dharan',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => CSDepartment()),
-                              );
-                            },
-                          ),
-                        ),
-                        Container(
-                          height: 47,
-                          width: 160,
-                          child: RaisedButton(
-                            color: Colors.white,
-                            elevation: 1.3,
-                            child: Text(
-                              'Faculty',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => CSDepartment()),
-                              );
-                            },
                           ),
                         ),
                       ],
@@ -128,19 +143,62 @@ class Department extends StatelessWidget {
               ),
               Card(
                 elevation: 0,
-                margin:
-                    new EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                margin: new EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.height * 0.045,
+                    vertical: MediaQuery.of(context).size.height * 0.020),
                 child: Column(
                   //mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Container(
-                      height: 50,
+                      height: MediaQuery.of(context).size.height * 0.060,
                       child: ListTile(
                         tileColor: Colors.grey[400],
-                        title: Padding(
-                          padding: EdgeInsets.only(bottom: 6, top: 0),
-                          child: Center(
-                            child: FlatButton(
+                        title: FittedBox(
+                          child: Padding(
+                            padding: EdgeInsets.only(bottom: 6, top: 0),
+                            child: Container(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.057,
+                              child: FlatButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ECDepartment()),
+                                  );
+                                },
+                                child: Text(
+                                  'Electronics Engineering',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize:
+                                          SizeConfig.safeBlockHorizontal * 4.8,
+                                      fontFamily: 'OpenSans'),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Flexible(
+                          flex: 6,
+                          fit: FlexFit.tight,
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.057,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              elevation: 1.3,
+                              child: Text(
+                                'HoD : Dr.Laila D',
+                                style: TextStyle(
+                                  fontSize:
+                                      SizeConfig.safeBlockHorizontal * 2.9,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
                               onPressed: () {
                                 Navigator.push(
                                   context,
@@ -148,62 +206,33 @@ class Department extends StatelessWidget {
                                       builder: (context) => ECDepartment()),
                                 );
                               },
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 4,
+                          fit: FlexFit.tight,
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.057,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              elevation: 1.3,
                               child: Text(
-                                'Electronics Engineering',
+                                'Faculty',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 22,
-                                    fontFamily: 'OpenSans'),
+                                  fontSize:
+                                      SizeConfig.safeBlockHorizontal * 2.9,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ECDepartment()),
+                                );
+                              },
                             ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Container(
-                          height: 47,
-                          width: 240,
-                          child: RaisedButton(
-                            color: Colors.white,
-                            elevation: 1.3,
-                            child: Text(
-                              'HoD : Dr.Laila D',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ECDepartment()),
-                              );
-                            },
-                          ),
-                        ),
-                        Container(
-                          height: 47,
-                          width: 160,
-                          child: RaisedButton(
-                            color: Colors.white,
-                            elevation: 1.3,
-                            child: Text(
-                              'Faculty',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ECDepartment()),
-                              );
-                            },
                           ),
                         ),
                       ],
@@ -213,19 +242,62 @@ class Department extends StatelessWidget {
               ),
               Card(
                 elevation: 0,
-                margin:
-                    new EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                margin: new EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.height * 0.045,
+                    vertical: MediaQuery.of(context).size.height * 0.030),
                 child: Column(
                   //mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Container(
-                      height: 50,
+                      height: MediaQuery.of(context).size.height * 0.060,
                       child: ListTile(
                         tileColor: Colors.grey[400],
-                        title: Padding(
-                          padding: EdgeInsets.only(bottom: 6, top: 0),
-                          child: Center(
-                            child: FlatButton(
+                        title: FittedBox(
+                          child: Padding(
+                            padding: EdgeInsets.only(bottom: 6, top: 0),
+                            child: Container(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.057,
+                              child: FlatButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => EEDepartment()),
+                                  );
+                                },
+                                child: Text(
+                                  'Electrical Engineering',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize:
+                                          SizeConfig.safeBlockHorizontal * 4.8,
+                                      fontFamily: 'OpenSans'),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Flexible(
+                          flex: 6,
+                          fit: FlexFit.tight,
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.057,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              elevation: 1.3,
+                              child: Text(
+                                'HoD : Dr.Bindu C J',
+                                style: TextStyle(
+                                  fontSize:
+                                      SizeConfig.safeBlockHorizontal * 2.9,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
                               onPressed: () {
                                 Navigator.push(
                                   context,
@@ -233,62 +305,33 @@ class Department extends StatelessWidget {
                                       builder: (context) => EEDepartment()),
                                 );
                               },
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 4,
+                          fit: FlexFit.tight,
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.057,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              elevation: 1.3,
                               child: Text(
-                                'Electrical Engineering',
+                                'Faculty',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 22,
-                                    fontFamily: 'OpenSans'),
+                                  fontSize:
+                                      SizeConfig.safeBlockHorizontal * 2.9,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => EEDepartment()),
+                                );
+                              },
                             ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Container(
-                          height: 47,
-                          width: 240,
-                          child: RaisedButton(
-                            color: Colors.white,
-                            elevation: 1.3,
-                            child: Text(
-                              'HoD : Dr.Bindu C J',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => EEDepartment()),
-                              );
-                            },
-                          ),
-                        ),
-                        Container(
-                          height: 47,
-                          width: 160,
-                          child: RaisedButton(
-                            color: Colors.white,
-                            elevation: 1.3,
-                            child: Text(
-                              'Faculty',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => EEDepartment()),
-                              );
-                            },
                           ),
                         ),
                       ],
@@ -298,19 +341,62 @@ class Department extends StatelessWidget {
               ),
               Card(
                 elevation: 0,
-                margin:
-                    new EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                margin: new EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.height * 0.045,
+                    vertical: MediaQuery.of(context).size.height * 0.020),
                 child: Column(
                   //mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Container(
-                      height: 50,
+                      height: MediaQuery.of(context).size.height * 0.060,
                       child: ListTile(
                         tileColor: Colors.grey[400],
-                        title: Padding(
-                          padding: EdgeInsets.only(bottom: 6, top: 0),
-                          child: Center(
-                            child: FlatButton(
+                        title: FittedBox(
+                          child: Padding(
+                            padding: EdgeInsets.only(bottom: 6, top: 0),
+                            child: Container(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.057,
+                              child: FlatButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => GEDepartment()),
+                                  );
+                                },
+                                child: Text(
+                                  'General Engineering',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize:
+                                          SizeConfig.safeBlockHorizontal * 4.8,
+                                      fontFamily: 'OpenSans'),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: <Widget>[
+                        Flexible(
+                          flex: 6,
+                          fit: FlexFit.tight,
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.057,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              elevation: 1.3,
+                              child: Text(
+                                'HoD : Dr.Ashok Kumar T V',
+                                style: TextStyle(
+                                  fontSize:
+                                      SizeConfig.safeBlockHorizontal * 2.9,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
                               onPressed: () {
                                 Navigator.push(
                                   context,
@@ -318,62 +404,33 @@ class Department extends StatelessWidget {
                                       builder: (context) => GEDepartment()),
                                 );
                               },
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          flex: 4,
+                          fit: FlexFit.tight,
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.057,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              elevation: 1.3,
                               child: Text(
-                                'General Engineering',
+                                'Faculty',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 22,
-                                    fontFamily: 'OpenSans'),
+                                  fontSize:
+                                      SizeConfig.safeBlockHorizontal * 2.9,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => GEDepartment()),
+                                );
+                              },
                             ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Container(
-                          height: 47,
-                          width: 240,
-                          child: RaisedButton(
-                            color: Colors.white,
-                            elevation: 1.3,
-                            child: Text(
-                              'HoD : Dr.Ashok Kumar T V',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => GEDepartment()),
-                              );
-                            },
-                          ),
-                        ),
-                        Container(
-                          height: 47,
-                          width: 160,
-                          child: RaisedButton(
-                            color: Colors.white,
-                            elevation: 1.3,
-                            child: Text(
-                              'Faculty',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => GEDepartment()),
-                              );
-                            },
                           ),
                         ),
                       ],
@@ -383,32 +440,38 @@ class Department extends StatelessWidget {
               ),
               Card(
                 elevation: 0,
-                margin:
-                    new EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+                margin: new EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.height * 0.045,
+                    vertical: MediaQuery.of(context).size.height * 0.020),
                 child: Column(
                   //mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Container(
-                      height: 50,
+                      height: MediaQuery.of(context).size.height * 0.060,
                       child: ListTile(
                         tileColor: Colors.grey[400],
-                        title: Padding(
-                          padding: EdgeInsets.only(bottom: 6, top: 0),
-                          child: Center(
-                            child: FlatButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => AEDepartment()),
-                                );
-                              },
-                              child: Text(
-                                'Applied Science',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 22,
-                                    fontFamily: 'OpenSans'),
+                        title: FittedBox(
+                          child: Padding(
+                            padding: EdgeInsets.only(bottom: 6, top: 0),
+                            child: Container(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.057,
+                              child: FlatButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => AEDepartment()),
+                                  );
+                                },
+                                child: Text(
+                                  'Applied Science',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize:
+                                          SizeConfig.safeBlockHorizontal * 4.6,
+                                      fontFamily: 'OpenSans'),
+                                ),
                               ),
                             ),
                           ),
@@ -417,49 +480,59 @@ class Department extends StatelessWidget {
                     ),
                     Row(
                       children: <Widget>[
-                        Container(
-                          height: 47,
-                          width: 240,
-                          child: RaisedButton(
-                            color: Colors.white,
-                            elevation: 1.3,
-                            child: Text(
-                              'HoD : Dr.Madhusoodhanan\nNair R',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w400,
+                        Flexible(
+                          flex: 6,
+                          fit: FlexFit.tight,
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.057,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              elevation: 1.3,
+                              child: Center(
+                                child: Text(
+                                  'HoD : Dr.Madhusoodhanan Nair R',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize:
+                                        SizeConfig.safeBlockHorizontal * 2.9,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
                               ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => AEDepartment()),
+                                );
+                              },
                             ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => AEDepartment()),
-                              );
-                            },
                           ),
                         ),
-                        Container(
-                          height: 47,
-                          width: 160,
-                          child: RaisedButton(
-                            color: Colors.white,
-                            elevation: 1.3,
-                            child: Text(
-                              'Faculty',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
+                        Flexible(
+                          flex: 4,
+                          fit: FlexFit.tight,
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.057,
+                            child: RaisedButton(
+                              color: Colors.white,
+                              elevation: 1.3,
+                              child: Text(
+                                'Faculty',
+                                style: TextStyle(
+                                  fontSize:
+                                      SizeConfig.safeBlockHorizontal * 2.9,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => AEDepartment()),
+                                );
+                              },
                             ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => AEDepartment()),
-                              );
-                            },
                           ),
                         ),
                       ],
