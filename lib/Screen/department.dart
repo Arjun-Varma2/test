@@ -53,7 +53,7 @@ class Department extends StatelessWidget {
                     Container(
                       height: MediaQuery.of(context).size.height * 0.060,
                       child: ListTile(
-                        tileColor: Colors.grey[400],
+                        tileColor: Color.fromRGBO(165, 222, 229, 0.8),
                         title: FittedBox(
                           child: Padding(
                             padding: EdgeInsets.only(bottom: 6, top: 0),
@@ -96,7 +96,7 @@ class Department extends StatelessWidget {
                                 'HoD : Dr Smitha Dharan',
                                 style: TextStyle(
                                   fontSize:
-                                      SizeConfig.safeBlockHorizontal * 2.9,
+                                  SizeConfig.safeBlockHorizontal * 2.9,
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),
@@ -152,7 +152,7 @@ class Department extends StatelessWidget {
                     Container(
                       height: MediaQuery.of(context).size.height * 0.060,
                       child: ListTile(
-                        tileColor: Colors.grey[400],
+                        tileColor: Color.fromRGBO(165, 222, 229, 0.8),
                         title: FittedBox(
                           child: Padding(
                             padding: EdgeInsets.only(bottom: 6, top: 0),
@@ -251,7 +251,7 @@ class Department extends StatelessWidget {
                     Container(
                       height: MediaQuery.of(context).size.height * 0.060,
                       child: ListTile(
-                        tileColor: Colors.grey[400],
+                        tileColor: Color.fromRGBO(165, 222, 229, 0.8),
                         title: FittedBox(
                           child: Padding(
                             padding: EdgeInsets.only(bottom: 6, top: 0),
@@ -350,7 +350,7 @@ class Department extends StatelessWidget {
                     Container(
                       height: MediaQuery.of(context).size.height * 0.060,
                       child: ListTile(
-                        tileColor: Colors.grey[400],
+                        tileColor: Color.fromRGBO(165, 222, 229, 0.8),
                         title: FittedBox(
                           child: Padding(
                             padding: EdgeInsets.only(bottom: 6, top: 0),
@@ -449,7 +449,7 @@ class Department extends StatelessWidget {
                     Container(
                       height: MediaQuery.of(context).size.height * 0.060,
                       child: ListTile(
-                        tileColor: Colors.grey[400],
+                        tileColor: Color.fromRGBO(165, 222, 229, 0.8),
                         title: FittedBox(
                           child: Padding(
                             padding: EdgeInsets.only(bottom: 6, top: 0),
