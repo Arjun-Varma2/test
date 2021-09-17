@@ -58,6 +58,7 @@ class _ProfilePageState extends State<ProfilePage> {
             setState(() => isLoading = false);
              Fluttertoast.showToast(msg: 'Event added',toastLength: Toast.LENGTH_LONG, gravity: ToastGravity.CENTER,
             backgroundColor: Colors.blue[300],textColor: Colors.white,fontSize: 16.0);
+            Navigator.of(context).pop();
            // Navigator.pop(context);
           });
         } else {

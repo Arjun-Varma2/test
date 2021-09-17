@@ -57,6 +57,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 backgroundColor: Colors.blue[300],
                 textColor: Colors.white,
                 fontSize: 16.0);
+            Navigator.of(context).pop();
             // Navigator.pop(context);
           });
         } else {

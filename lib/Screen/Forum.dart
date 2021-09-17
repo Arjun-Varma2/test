@@ -13,7 +13,6 @@ import 'package:proddeccec/backend/size_config.dart';
 class Forum extends StatefulWidget {
   _ForumState createState() => _ForumState();
 }
-
 class _ForumState extends State<Forum> {
   @override
   Widget build(BuildContext context) {

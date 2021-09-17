@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proddeccec/Screen/forum/addEvent/surge/events.dart';
 import 'package:proddeccec/Screen/forum/addEvent/surge/addevent.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -126,7 +127,7 @@ class _State extends State<LoginPage> {
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          ProfilePage()),
+                                                          EventLister()),
                                                 );
                                               } else {
                                                 return Fluttertoast.showToast(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:proddeccec/Screen/forum/addEvent/iedc/addevent.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:proddeccec/Screen/forum/addEvent/iedc/events.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -117,7 +118,7 @@ class _State extends State<LoginPage> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            ProfilePage()),
+                                                            EventLister()),
                                                   );
                                                 } else {
                                                   return  Fluttertoast.showToast(
