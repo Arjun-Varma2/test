@@ -136,9 +136,9 @@ class ECDepartment extends StatelessWidget {
                                   elevation: 0.0,
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(0)),
-                                  baseColor: Colors.grey[400],
-                                  expandedColor: Colors.grey[50],
-                                  shadowColor: Colors.grey[50],
+                                  baseColor: Color.fromRGBO(165, 222, 229, 0.8),
+                                  expandedColor: Color.fromRGBO(165, 222, 229, 0.8),
+                                  shadowColor: Colors.white,
                                   expandedTextColor: Colors.black,
                                   title: Padding(
                                     padding: EdgeInsets.only(
@@ -154,138 +154,80 @@ class ECDepartment extends StatelessWidget {
                                     ),
                                   ),
                                   children: [
-                                    Column(
-                                      children: [
-                                        // Container(
-                                        //   margin: EdgeInsets.only(
-                                        //       top: MediaQuery.of(context).size.height *
-                                        //           .02),
-                                        //   height:
-                                        //       MediaQuery.of(context).size.height * .20,
-                                        //   decoration: BoxDecoration(
-                                        //     image: DecorationImage(
-                                        //       image: AssetImage(collegeStaff.data()['image']),
-                                        //     ),
-                                        //   ),
-                                        // ),
-                                        // Container(
-                                        //   margin: EdgeInsets.only(
-                                        //       top: MediaQuery.of(context)
-                                        //               .size
-                                        //               .height *
-                                        //           .02),
-                                        //   child: Text(
-                                        //     collegeStaff.data()['designation'],
-                                        //     style: TextStyle(
-                                        //         fontWeight: FontWeight.w400,
-                                        //         fontSize: 21,
-                                        //         fontFamily: 'OpenSans'),
-                                        //   ),
-                                        // ),
-                                        Container(
-                                          margin: EdgeInsets.only(
-                                              top: MediaQuery.of(context)
-                                                      .size
-                                                      .height *
-                                                  .02),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: <Widget>[
-                                              Flexible(
-                                                flex: 4,
-                                                fit: FlexFit.tight,
-                                                child: Container(
-                                                  child: RaisedButton(
-                                                    color: Colors.grey[400],
-                                                    elevation: 0.7,
-                                                    child: Text(
-                                                      'Designation',
-                                                      style: TextStyle(
-                                                        fontFamily: 'OpenSans',
-                                                        fontSize: SizeConfig
-                                                                .safeBlockHorizontal *
-                                                            3.2,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
-                                                    ),
-                                                    onPressed: () {},
-                                                  ),
-                                                ),
-                                              ),
-                                              Flexible(
-                                                flex: 6,
-                                                fit: FlexFit.tight,
-                                                child: Container(
-                                                  child: RaisedButton(
-                                                    elevation: 0.7,
-                                                    color: Colors.white,
-                                                    child: Text(
-                                                      collegeStaff.data()[
-                                                          'designation'],
-                                                      style: TextStyle(
-                                                        fontFamily: 'OpenSans',
-                                                        fontSize: SizeConfig
-                                                                .safeBlockHorizontal *
-                                                            2.8,
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                      ),
-                                                    ),
-                                                    onPressed: () {},
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: EdgeInsets.only(
-                                              top: MediaQuery.of(context)
-                                                      .size
-                                                      .height *
-                                                  .01),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: <Widget>[
-                                              Flexible(
-                                                flex: 4,
-                                                fit: FlexFit.tight,
-                                                child: Container(
-                                                  child: RaisedButton(
-                                                    color: Colors.grey[400],
-                                                    elevation: 0.7,
-                                                    child: Text(
-                                                      'Email',
-                                                      style: TextStyle(
-                                                        fontFamily: 'OpenSans',
-                                                        fontSize: SizeConfig
-                                                                .safeBlockHorizontal *
-                                                            2.8,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
-                                                    ),
-                                                    onPressed: () {},
-                                                  ),
-                                                ),
-                                              ),
-                                              Flexible(
-                                                flex: 6,
-                                                fit: FlexFit.tight,
-                                                child: Container(
-                                                  child: RaisedButton(
-                                                    elevation: 0.7,
-                                                    color: Colors.white,
-                                                    child: FittedBox(
+                                    Container(
+                                      color: Colors.white,
+                                      child: Column(
+                                        children: [
+                                          // Container(
+                                          //   margin: EdgeInsets.only(
+                                          //       top: MediaQuery.of(context).size.height *
+                                          //           .02),
+                                          //   height:
+                                          //       MediaQuery.of(context).size.height * .20,
+                                          //   decoration: BoxDecoration(
+                                          //     image: DecorationImage(
+                                          //       image: AssetImage(collegeStaff.data()['image']),
+                                          //     ),
+                                          //   ),
+                                          // ),
+                                          // Container(
+                                          //   margin: EdgeInsets.only(
+                                          //       top: MediaQuery.of(context)
+                                          //               .size
+                                          //               .height *
+                                          //           .02),
+                                          //   child: Text(
+                                          //     collegeStaff.data()['designation'],
+                                          //     style: TextStyle(
+                                          //         fontWeight: FontWeight.w400,
+                                          //         fontSize: 21,
+                                          //         fontFamily: 'OpenSans'),
+                                          //   ),
+                                          // ),
+                                          Container(
+                                            margin: EdgeInsets.only(
+                                                top: MediaQuery.of(context)
+                                                        .size
+                                                        .height *
+                                                    .02),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: <Widget>[
+                                                Flexible(
+                                                  flex: 4,
+                                                  fit: FlexFit.tight,
+                                                  child: Container(
+                                                    child: RaisedButton(
+                                                      color: Color.fromRGBO(254, 253, 202, 1),
+                                                      elevation: 0.7,
                                                       child: Text(
-                                                        collegeStaff
-                                                            .data()['email'],
+                                                        'Designation',
                                                         style: TextStyle(
-                                                          fontFamily:
-                                                              'OpenSans',
+                                                          fontFamily: 'OpenSans',
+                                                          fontSize: SizeConfig
+                                                                  .safeBlockHorizontal *
+                                                              3.2,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                                      ),
+                                                      onPressed: () {},
+                                                    ),
+                                                  ),
+                                                ),
+                                                Flexible(
+                                                  flex: 6,
+                                                  fit: FlexFit.tight,
+                                                  child: Container(
+                                                    child: RaisedButton(
+                                                      elevation: 0.7,
+                                                      color: Colors.white,
+                                                      child: Text(
+                                                        collegeStaff.data()[
+                                                            'designation'],
+                                                        style: TextStyle(
+                                                          fontFamily: 'OpenSans',
                                                           fontSize: SizeConfig
                                                                   .safeBlockHorizontal *
                                                               2.8,
@@ -293,73 +235,134 @@ class ECDepartment extends StatelessWidget {
                                                               FontWeight.w400,
                                                         ),
                                                       ),
+                                                      onPressed: () {},
                                                     ),
-                                                    onPressed: () {},
                                                   ),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                        Container(
-                                          margin: EdgeInsets.only(
-                                              top: MediaQuery.of(context)
-                                                      .size
-                                                      .height *
-                                                  .01),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: <Widget>[
-                                              Flexible(
-                                                flex: 4,
-                                                fit: FlexFit.tight,
-                                                child: Container(
-                                                  child: RaisedButton(
-                                                    color: Colors.grey[400],
-                                                    elevation: 0.7,
-                                                    child: Text(
-                                                      'Staff Room',
-                                                      style: TextStyle(
-                                                        fontFamily: 'OpenSans',
-                                                        fontSize: SizeConfig
-                                                                .safeBlockHorizontal *
-                                                            3.2,
-                                                        fontWeight:
-                                                            FontWeight.w600,
+                                          Container(
+                                            margin: EdgeInsets.only(
+                                                top: MediaQuery.of(context)
+                                                        .size
+                                                        .height *
+                                                    .01),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: <Widget>[
+                                                Flexible(
+                                                  flex: 4,
+                                                  fit: FlexFit.tight,
+                                                  child: Container(
+                                                    child: RaisedButton(
+                                                      color: Color.fromRGBO(254, 253, 202, 1),
+                                                      elevation: 0.7,
+                                                      child: Text(
+                                                        'Email',
+                                                        style: TextStyle(
+                                                          fontFamily: 'OpenSans',
+                                                          fontSize: SizeConfig
+                                                                  .safeBlockHorizontal *
+                                                              2.8,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
                                                       ),
+                                                      onPressed: () {},
                                                     ),
-                                                    onPressed: () {},
                                                   ),
                                                 ),
-                                              ),
-                                              Flexible(
-                                                flex: 6,
-                                                fit: FlexFit.tight,
-                                                child: Container(
-                                                  child: RaisedButton(
-                                                    elevation: 0.7,
-                                                    color: Colors.white,
-                                                    child: Text(
-                                                      collegeStaff
-                                                          .data()['room'],
-                                                      style: TextStyle(
-                                                        fontFamily: 'OpenSans',
-                                                        fontSize: SizeConfig
-                                                                .safeBlockHorizontal *
-                                                            2.8,
-                                                        fontWeight:
-                                                            FontWeight.w400,
+                                                Flexible(
+                                                  flex: 6,
+                                                  fit: FlexFit.tight,
+                                                  child: Container(
+                                                    child: RaisedButton(
+                                                      elevation: 0.7,
+                                                      color: Colors.white,
+                                                      child: FittedBox(
+                                                        child: Text(
+                                                          collegeStaff
+                                                              .data()['email'],
+                                                          style: TextStyle(
+                                                            fontFamily:
+                                                                'OpenSans',
+                                                            fontSize: SizeConfig
+                                                                    .safeBlockHorizontal *
+                                                                2.8,
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                          ),
+                                                        ),
                                                       ),
+                                                      onPressed: () {},
                                                     ),
-                                                    onPressed: () {},
                                                   ),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                          Container(
+                                            margin: EdgeInsets.only(
+                                                top: MediaQuery.of(context)
+                                                        .size
+                                                        .height *
+                                                    .01),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: <Widget>[
+                                                Flexible(
+                                                  flex: 4,
+                                                  fit: FlexFit.tight,
+                                                  child: Container(
+                                                    child: RaisedButton(
+                                                      color: Color.fromRGBO(254, 253, 202, 1),
+                                                      elevation: 0.7,
+                                                      child: Text(
+                                                        'Staff Room',
+                                                        style: TextStyle(
+                                                          fontFamily: 'OpenSans',
+                                                          fontSize: SizeConfig
+                                                                  .safeBlockHorizontal *
+                                                              3.2,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                                      ),
+                                                      onPressed: () {},
+                                                    ),
+                                                  ),
+                                                ),
+                                                Flexible(
+                                                  flex: 6,
+                                                  fit: FlexFit.tight,
+                                                  child: Container(
+                                                    child: RaisedButton(
+                                                      elevation: 0.7,
+                                                      color: Colors.white,
+                                                      child: Text(
+                                                        collegeStaff
+                                                            .data()['room'],
+                                                        style: TextStyle(
+                                                          fontFamily: 'OpenSans',
+                                                          fontSize: SizeConfig
+                                                                  .safeBlockHorizontal *
+                                                              2.8,
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                        ),
+                                                      ),
+                                                      onPressed: () {},
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ],
                                 ),
